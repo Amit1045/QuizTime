@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/main.css">
+</head>
+
+<body id="quiz-app">
+    <form action="/submit" method="post">
+        <h3>Total score : <%= locals.totalScore ? totalScore:"0" %></h3>
+        <h1>
+            <%=question.country%>
+        </h1>
+        <input type="text" id="answer" name="answer">
+        <button type="submit">Submit
+            <% if(locals.wasCorrect){ %> ✔ <% } else if (locals.wasCorrect===false) { %> ✖ <% } %>
+        </button>
+    
+    </form>
+  <script>
+    var wasCorrect = "<%= locals.wasCorrect %>";
+    // console.log(wasCorrect)
+    if (wasCorrect === "false") {
+      alert('Game over! Final best score: <%= locals.totalScore %>');
+      document.getElementById("quiz-app").innerHTML = '<a href="/" class="restart-button">Restart</a>'
+    }
+  </script>
+</body>
+
+</html>

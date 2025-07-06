@@ -1,0 +1,47 @@
+body{
+    background-image: url(https://img.freepik.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?semt=ais_hybrid&w=740);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    text-align: center;
+    margin: 250px 150px;
+    padding : auto;
+    font-size: 30px;
+    
+}
+.totalScore{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.country{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight: 400;
+}
+#answer{
+    border: 1px solid purple;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+}
+.sub{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color:white;
+    background-color: purple;
+   
+}
+.restart-button{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color:white;
+    background-color: purple;
+    margin-top: 400px;
+    position: absolute;
+    margin-left: 700px;
+    font-size: 50px;  
+}

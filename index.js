@@ -6,6 +6,7 @@ const app = express()
 const port = 3000
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
+
 let quiz = []
 let totalCorrect = 0
 let currentQuestion = {}
@@ -46,15 +47,9 @@ app.get("/", async (req, res) => {
 
 app.post("/submit", (req, res) => {
     let answer = req.body.answer.trim()
-    console.log("User answer:", answer);
-    console.log("User Answer:", answer.toLowerCase());
-    console.log("Correct Answer:", currentQuestion.capital.toLowerCase());
-
     let isCorrect = false
     if (currentQuestion && currentQuestion.capital) {
-        console.log("first if condition...");
-        if (currentQuestion.capital.toLowerCase() === answer.toLowerCase()) {
-            console.log("Second if condition...");
+         if (currentQuestion.capital.toLowerCase() === answer.toLowerCase()) {
             totalCorrect++;
             isCorrect=true;
         }
@@ -71,7 +66,7 @@ app.post("/submit", (req, res) => {
 async function nextQuestion() {
     const randomCountry = quiz[Math.floor(Math.random() * quiz.length)];
     currentQuestion = randomCountry;
-    console.log(JSON.stringify(randomCountry));
+    //  console.log(JSON.stringify(randomCountry));
 
 }
 

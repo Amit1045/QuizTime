@@ -13,10 +13,8 @@
     <form action="/submit" method="post">
         <h3 class="totalScore">Total score : <%= locals.totalScore ? totalScore:"0" %></h3>
         <h1 class="country"><%=question.country%></h1>
-        <input type="text" id="answer" name="answer">
-        <button type="submit" class="sub">Submit
-            <% if(locals.wasCorrect){ %> ✔ <% } else if (locals.wasCorrect===false) { %> ✖ <% } %>
-        </button>
+        <input type="text" id="answer" name="answer" required>
+        <button type="submit" class="sub">Submit</button>
     
     </form>
   <script>
